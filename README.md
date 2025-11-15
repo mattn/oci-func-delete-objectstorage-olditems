@@ -4,10 +4,6 @@ OCI Function to Delete Old Objects in Object Storage
 
 This is a Go-based Oracle Cloud Infrastructure (OCI) Function that recursively deletes objects older than a specified retention period from an Object Storage bucket. It uses Resource Principal authentication and is designed to run as a scheduled function (e.g., via OCI Events or cron-like triggers) for automated cleanup of old logs or data.
 
-## Repository
-
-https://github.com/mattn/oci-func-delete-objectstorage-olditems
-
 ## Features
 
 - **Recursive Deletion**: Scans the entire bucket (including subdirectories) and deletes objects older than the configured retention days.
