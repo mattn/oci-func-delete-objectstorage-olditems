@@ -6,18 +6,7 @@ This is a Go-based Oracle Cloud Infrastructure (OCI) Function that recursively d
 
 ## Features
 
-- **Recursive Deletion**: Scans the entire bucket (including subdirectories) and deletes objects older than the configured retention days.
-- **Configurable**: Bucket name and retention period set via environment variables or JSON input payload.
-- **Error Handling**: Logs errors for failed deletions and continues processing.
-- **Efficient Listing**: Uses OCI SDK's `ListObjects` with delimiters for directory traversal.
-- **Output Logging**: Prints deleted objects and a summary count to the function's output stream.
-
-## Prerequisites
-
-- **OCI Account**: Access to OCI Console with permissions to create Functions, Dynamic Groups, and Policies.
-- **OCI CLI and Fn Project**: Installed locally for development and deployment (see [OCI Functions Quickstart](https://docs.oracle.com/en-us/iaas/Content/Functions/Concepts/funconcepts.htm)).
-- **Go 1.21+**: For local building (optional, as Functions builds from source).
-- **Dependencies**: The code uses `github.com/oracle/oci-go-sdk/v65` for OCI interactions and `github.com/fnproject/fdk-go` for the function handler.
+Scans the entire bucket (including subdirectories) and deletes objects older than the configured retention days.
 
 To operate Object Storage from Oracle Cloud Functions, you must set up a **Dynamic Group** and **Policy** for Resource Principal authentication:
 
